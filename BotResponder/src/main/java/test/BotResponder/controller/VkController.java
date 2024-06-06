@@ -10,17 +10,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import test.BotResponder.dto.CallbackDto;
+import test.BotResponder.service.VkService;
 
 @RestController
 @RequestMapping(value = "/callbacks")
 @RequiredArgsConstructor
 @PropertySource(value = "classpath:application.properties")
-public class CallbackController {
+public class VkController {
+    private final VkService vkService;
     @Value("${vk.api.confirmation}")
     private String callbackSecret;
 
     @PostMapping
-    public ResponseEntity<String> handleCallback(@RequestBody CallbackDto callbackDto) {
-        return new ResponseEntity<>(callbackSecret, HttpStatus.OK);
+    public ResponseEntity<String> receiveMessage(@RequestBody CallbackDto callbackDto) {
+        return vkService.sendMessage(callbackDto);
     }
 }
