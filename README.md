@@ -1,4 +1,4 @@
-# BotResponder
+~~# BotResponder
 
 BotResponder - это приложение на Java с использованием Spring Boot для обработки событий от BotAPI VK.
 
@@ -25,8 +25,8 @@ BotResponder - это приложение на Java с использовани
 
 
 ### Как запустить приложение
-1. Клонируйте репозиторий
-   git clone git@github.com:navope/BotResponder.git
+1. Клонируйте репозиторий 
+   "git clone git@github.com:navope/BotResponder.git"
 2. создайте файл `.env` в корневом каталоге и заполните необходимые поля.
 3. C помощью ngrok необходимо открыть доступ к внутренним ресурсам машины, на которой он запущен, из внешней сети:
    ngrok http http://localhost:8080
@@ -45,4 +45,4 @@ BotResponder - это приложение на Java с использовани
 При реализации может потребоваться использование внешних https адресов для локальной машины. Для этого можно использовать ngrok.
 
 ### Пример работы бота
-![example](dock/work.png)
+![example](BotResponder/dock/work.png)
