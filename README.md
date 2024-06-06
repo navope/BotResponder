@@ -1,4 +1,4 @@
-~~# BotResponder
+### BotResponder
 
 BotResponder - это приложение на Java с использованием Spring Boot для обработки событий от BotAPI VK.
 
@@ -45,4 +45,4 @@ BotResponder - это приложение на Java с использовани
 При реализации может потребоваться использование внешних https адресов для локальной машины. Для этого можно использовать ngrok.
 
 ### Пример работы бота
-![example](BotResponder/dock/work.png)
+![example](dock/work.png)
